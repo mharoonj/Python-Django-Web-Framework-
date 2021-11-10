@@ -3,4 +3,19 @@
 <h1>Contact</h1>
 <p>{{request.user}}</p>
 <p>this is a Contact templete</p>
+
+<hr/>
+<p>
+    <!-- django filters |<name> -->
+    {{  my_text|title  }}, {{my_number}}
+</p>
+
+
+<ul>
+    
+    {% for item in my_list %}
+    <li>{{forloop.counter}} - {{ item }}</li>
+    {% endfor %}
+</ul>
+
 {% endblock %}
