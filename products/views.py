@@ -21,13 +21,24 @@ def product_detail_view(request, *args, **kwargs):
 
 
 
-def product_create_view(request, *args, **kwargs):
-    form = ProductForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-        form = ProductForm()
 
+
+# def product_create_view(request, *args, **kwargs):
+#     form = ProductForm(request.POST or None)
+#     if form.is_valid():
+#         form.save()
+#         form = ProductForm()
+
+#     context = {
+#         "form":form
+#     }
+#     return render(request, 'products/product_create.html',context)
+
+
+
+def product_create_view(request, *args, **kwargs):
+    print(request.POST)
     context = {
-        "form":form
+
     }
     return render(request, 'products/product_create.html',context)
